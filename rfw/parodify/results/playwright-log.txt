@@ -1,12 +1,12 @@
-{"level":30,"time":"2021-05-05T21:43:09.528Z","pid":12332,"hostname":"Quintiliano","msg":"Listening on 60350"}
-{"level":30,"time":"2021-05-05T21:43:09.846Z","pid":12332,"hostname":"Quintiliano","msg":"Changed active context"}
-{"level":30,"time":"2021-05-05T21:43:09.934Z","pid":12332,"hostname":"Quintiliano","msg":"Video path: undefined"}
-{"level":30,"time":"2021-05-05T21:43:09.934Z","pid":12332,"hostname":"Quintiliano","msg":"Changed active page"}
-{"level":30,"time":"2021-05-05T21:43:14.378Z","pid":12332,"hostname":"Quintiliano","msg":"Retrieved text for element label[for=\"user_email\"] containing Email"}
-{"level":30,"time":"2021-05-05T21:43:14.434Z","pid":12332,"hostname":"Quintiliano","msg":"Retrieved text for element label[for=\"user_Senha secreta\"] containing Senha secreta"}
-{"level":30,"time":"2021-05-05T21:43:15.277Z","pid":12332,"hostname":"Quintiliano","msg":"Changed active context"}
-{"level":30,"time":"2021-05-05T21:43:15.277Z","pid":12332,"hostname":"Quintiliano","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-05T21:43:15.277Z","pid":12332,"hostname":"Quintiliano","msg":"Changed active page"}
-{"level":30,"time":"2021-05-05T21:43:15.289Z","pid":12332,"hostname":"Quintiliano","msg":"Changed active context"}
-{"level":30,"time":"2021-05-05T21:43:15.289Z","pid":12332,"hostname":"Quintiliano","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-05T21:43:15.289Z","pid":12332,"hostname":"Quintiliano","msg":"Changed active page"}
+{"level":30,"time":"2021-05-05T21:54:43.296Z","pid":10716,"hostname":"Quintiliano","msg":"Listening on 60821"}
+{"level":30,"time":"2021-05-05T21:54:43.610Z","pid":10716,"hostname":"Quintiliano","msg":"Changed active context"}
+{"level":30,"time":"2021-05-05T21:54:43.729Z","pid":10716,"hostname":"Quintiliano","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-05T21:54:43.729Z","pid":10716,"hostname":"Quintiliano","msg":"Changed active page"}
+{"level":30,"time":"2021-05-05T21:54:47.012Z","pid":10716,"hostname":"Quintiliano","msg":"Retrieved text for element label[for=\"user_email\"] containing Email"}
+{"level":30,"time":"2021-05-05T21:54:47.072Z","pid":10716,"hostname":"Quintiliano","msg":"Retrieved text for element label[for=\"user_Senha secreta\"] containing Senha secreta"}
+{"level":30,"time":"2021-05-05T21:54:47.975Z","pid":10716,"hostname":"Quintiliano","msg":"Changed active context"}
+{"level":30,"time":"2021-05-05T21:54:47.976Z","pid":10716,"hostname":"Quintiliano","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-05T21:54:47.976Z","pid":10716,"hostname":"Quintiliano","msg":"Changed active page"}
+{"level":30,"time":"2021-05-05T21:54:47.988Z","pid":10716,"hostname":"Quintiliano","msg":"Changed active context"}
+{"level":30,"time":"2021-05-05T21:54:47.988Z","pid":10716,"hostname":"Quintiliano","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-05T21:54:47.988Z","pid":10716,"hostname":"Quintiliano","msg":"Changed active page"}
