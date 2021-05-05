@@ -1,0 +1,67 @@
+*** Settings ***
+Documentation     Sikuli Library Demo
+Test Setup        Carrega diretório de imagens
+Test Teardown     Stop Remote Server
+Library           SikuliLibrary
+Library           ImageHorizonLibrary
+
+*** Variables ***
+#As imagens da pasta img devem estar de acordo com a interface do seu PC!!!! Tire os prints necessários!
+${IMAGE_DIR}      ${CURDIR}\\img
+
+*** Test Cases ***
+School+ Imprimir Historico
+    Executa o school+
+    # Seleciona Banco de Dados
+    # Executa o school+ 2
+    Acessa o Modulo de Historicos
+    Preenche Dados Gerais
+    Preenche Series
+
+*** Keywords ***
+Carrega diretório de imagens
+    Add Image Path    ${IMAGE_DIR}
+
+Executa o school+
+    SikuliLibrary.Click  school+.png
+    SikuliLibrary.Click  Login.png
+    ImageHorizonLibrary.Type  tecsystem
+    SikuliLibrary.Click  Senha.png
+    ImageHorizonLibrary.Type  tec1429
+    SikuliLibrary.Click  BotaoOK.png
+
+# Seleciona Banco de Dados
+#     SikuliLibrary.Click  MenuFerramentas.png
+#     SikuliLibrary.Click  ModuloConfiguracoes.png
+#     ImageHorizonLibrary.Type  E:\\RobotSchool\\dat\\DARCYRIBEIRO.FDB
+#     SikuliLibrary.Click  BotaoOK.png 
+#     ImageHorizonLibrary.Type  key.enter
+
+# Executa o school+ 2
+#     SikuliLibrary.Click  school+.png
+#     SikuliLibrary.Click  Login.png
+#     ImageHorizonLibrary.Type  tecsystem
+#     SikuliLibrary.Click  Senha.png
+#     ImageHorizonLibrary.Type  tec1429
+#     SikuliLibrary.Click  BotaoOK.png
+
+Acessa o Modulo de Historicos
+    SikuliLibrary.Click  MenuDocumentos.png
+    SikuliLibrary.Click  ModuloHistoricos.png
+    SikuliLibrary.Click  BotaoIncluirHistorico.png
+
+Preenche Dados Gerais
+    SikuliLibrary.Click  LocalizarEscola.png
+    ImageHorizonLibrary.Type  EMEF DARCY RIBEIRO
+    SikuliLibrary.Click  BotaoOKDestaque.png
+    SikuliLibrary.Set Timeout  7
+    SikuliLibrary.Click  LocalizarCurso.png
+    ImageHorizonLibrary.Type  ENSINO FUNDAMENTAL
+    SikuliLibrary.Click  BotaoOKDestaque.png
+    SikuliLibrary.Click  LocalizarAluno.png
+    ImageHorizonLibrary.Type  ELTON VISA ZAMBON
+    SikuliLibrary.Set Timeout  15
+    SikuliLibrary.Click  BotaoOKDestaque.png
+    SikuliLibrary.Click  BotaoSalvar.png
+
+Preenche Series
