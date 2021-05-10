@@ -26,10 +26,6 @@ jobs:
       matrix:
         node-version: [12.x]
     
-    # Configurações 
-    # Configuração que instala o node
-    steps:
-        - name: Robot Report
           uses: joonvena/robotframework-reporter-action@v0.1
         
           #Enviar para o git hub pages
