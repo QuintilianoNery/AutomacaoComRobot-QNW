@@ -1,0 +1,29 @@
+# Nome do workflow
+
+name: DesafioQA
+
+# Comantos de configuração. 
+on:
+
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Abilitar workflow manualmente
+  workflow_dispatch:
+
+# Tarefas do workflow
+jobs:
+  # Onde quero executar o fluxo de trabalho
+  build:
+    # Executar em um windows-latest, ubuntu-latest
+    runs-on: ubuntu-latest
+
+          #Enviar para o git hub pages
+        - name: Deploy to GitHub Pages
+          uses: JamesIves/github-pages-deploy-action@3.7.1
+          with:
+            GITHUB_TOKEN: ${{SECRETS.GITHUB_TOKEN}}
+            BRANCH: gh-pages
+            FOLDER: results
