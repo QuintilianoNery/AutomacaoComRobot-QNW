@@ -43,3 +43,4 @@ jobs:
             GITHUB_TOKEN: ${{SECRETS.GITHUB_TOKEN}}
             BRANCH: gh-pages
             FOLDER: parodify/results
+            
