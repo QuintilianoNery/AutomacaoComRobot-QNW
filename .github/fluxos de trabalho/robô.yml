@@ -1,6 +1,6 @@
 # Nome do workflow
 
-name: CI-Robot
+name: CI
 
 # Comantos de configuração. 
 on:
@@ -26,8 +26,15 @@ jobs:
       matrix:
         node-version: [12.x]
     
-          uses: joonvena/robotframework-reporter-action@v0.1
-        
+    # Configurações 
+    # Configuração que instala o node
+    steps:
+        - name: Setup Node.js
+          uses: actions/setup-node@v2.1.2
+          with:
+            node-version: ${{ matrix.node-version }}
+        - uses: actions/checkout@v2
+
           #Enviar para o git hub pages
         - name: Deploy to GitHub Pages
           uses: JamesIves/github-pages-deploy-action@3.7.1
