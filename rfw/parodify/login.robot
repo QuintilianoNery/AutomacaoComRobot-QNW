@@ -23,4 +23,23 @@ Login com sucesso
     Browser.Click    input[type="submit"]
 
     #validar se na tela para onde foi logado existe o botão sair
-    Browser.Wait For Elements State    a[href$=sign_out]    visible    10    
+    Browser.Wait For Elements State    a[href$=sign_out]    visible    10
+
+
+Senha incorreta
+    #Login na página
+    New Page    https://parodify.herokuapp.com/users/sign_in
+
+    #validar campo texto e-mail
+    Browser.Get Text    label[for="user_email"]    contains                      Email
+   #preencher e-mail
+    Fill Text           input[id="user_email"]     quintilianoteste@gmail.com
+
+    #validar nome do campo senha
+    Browser.Get Text    label[for="user_Senha secreta"]    contains    Senha secreta
+    #preencher  campo senha
+    Fill Text           input[id="user_password"]          abc123
+
+    #clicar no botão salvar
+    Browser.Click          input[type="submit"]
+    Browser.Get Text    css=.is-danger .message-body    ==         Opps! Dados de acesso incorretos!
