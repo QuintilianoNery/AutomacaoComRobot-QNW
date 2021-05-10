@@ -26,4 +26,4 @@ jobs:
           with:
             GITHUB_TOKEN: ${{SECRETS.GITHUB_TOKEN}}
             BRANCH: gh-pages
-            FOLDER: results
+            FOLDER: '../../rfw/parodify/results'
