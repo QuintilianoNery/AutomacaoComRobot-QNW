@@ -1,6 +1,7 @@
+
 # Nome do workflow
 
-name: CI
+name: CI-Robot
 
 # Comantos de configuração. 
 on:
@@ -34,7 +35,7 @@ jobs:
           with:
             node-version: ${{ matrix.node-version }}
         - uses: actions/checkout@v2
-
+        
           #Enviar para o git hub pages
         - name: Deploy to GitHub Pages
           uses: JamesIves/github-pages-deploy-action@3.7.1
