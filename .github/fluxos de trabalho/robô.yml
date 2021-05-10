@@ -29,11 +29,8 @@ jobs:
     # Configurações 
     # Configuração que instala o node
     steps:
-        - name: Setup Node.js
-          uses: actions/setup-node@v2.1.2
-          with:
-            node-version: ${{ matrix.node-version }}
-        - uses: actions/checkout@v2
+        - name: Robot Report
+          uses: joonvena/robotframework-reporter-action@v0.1
         
           #Enviar para o git hub pages
         - name: Deploy to GitHub Pages
@@ -41,4 +38,4 @@ jobs:
           with:
             GITHUB_TOKEN: ${{SECRETS.GITHUB_TOKEN}}
             BRANCH: gh-pages
-            FOLDER: parodify/results
+            FOLDER: parodify/results/*.*
