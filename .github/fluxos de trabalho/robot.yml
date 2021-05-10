@@ -1,7 +1,5 @@
-
 # Nome do workflow
-
-name: CI-Robot
+name: CI
 
 # Comantos de configuração. 
 on:
