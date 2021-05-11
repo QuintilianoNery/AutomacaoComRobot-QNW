@@ -1,12 +1,30 @@
-on: 
+# Nome do workflow
+
+name: CI-Robot
+
+# Comantos de configuração. 
+on:
+  # sempre que tiver um envio para origin ele vai executar estes comandos
+    # Gatilhos de execuções, podendo agendar apra um determinado horário
   push:
-    branches: [ feature/Robot ]
-name: Main Workflow
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Abilitar workflow manualmente
+  workflow_dispatch:
+
+# Tarefas do workflow
 jobs:
-    #Enviar para o git hub pages
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.7.1
-      with:
-        GITHUB_TOKEN: ${{SECRETS.GITHUB_TOKEN}}
-        BRANCH: gh-pages
-        FOLDER: parodify/results
+  # Onde quero executar o fluxo de trabalho
+  build:
+    # Executar em um windows-latest, ubuntu-latest
+    runs-on: ubuntu-latest
+  
+        #Enviar para o git hub pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{SECRETS.GITHUB_TOKEN}}
+          BRANCH: gh-pages
+          FOLDER: parodify/results
