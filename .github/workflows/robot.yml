@@ -37,6 +37,7 @@ jobs:
         
         - name: Robot Reporter
           uses: joonvena/robotframework-reporter-action@v0.1
+          GH_ACCESS_TOKEN: ${{GH_ACCESS_TOKEN}}
 
           #Enviar para o git hub pages
         - name: Deploy to GitHub Pages
