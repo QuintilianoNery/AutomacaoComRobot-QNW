@@ -20,11 +20,16 @@ jobs:
   build:
     # Executar em um windows-latest, ubuntu-latest
     runs-on: ubuntu-latest
-  
-        #Enviar para o git hub pages
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{SECRETS.GITHUB_TOKEN}}
-          BRANCH: gh-pages
-          FOLDER: parodify/results
+    
+    # Qual versão do node vai ser utilizada
+    strategy:
+      matrix:
+
+    steps:      
+          #Enviar para o git hub pages
+        - name: Deploy to GitHub Pages
+          uses: JamesIves/github-pages-deploy-action@3.7.1
+          with:
+            GITHUB_TOKEN: ${{SECRETS.GITHUB_TOKEN}}
+            BRANCH: gh-pages
+            FOLDER: parodify/results
