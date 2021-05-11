@@ -1,0 +1,12 @@
+on: 
+  push:
+    branches: [ feature/Robot ]
+name: Main Workflow
+jobs:
+    #Enviar para o git hub pages
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        GITHUB_TOKEN: ${{SECRETS.GITHUB_TOKEN}}
+        BRANCH: gh-pages
+        FOLDER: parodify/results
